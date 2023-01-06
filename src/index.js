@@ -1,7 +1,13 @@
 console.log('%c HI', 'color: firebrick')
 
 function displayFun(item){
-    
+
+  card = document.querySelector("#dog-image-container")
+ 
+  card.innerHTML = `<img src=${item} >`
+ 
+  
+ 
 }
 
 
