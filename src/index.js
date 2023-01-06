@@ -15,3 +15,10 @@ fetch("https://dog.ceo/api/breeds/image/random/4")
 .then(response => response.json())
 .then(data => data.message.map(item => displayFun(item)))
 // data.map(item => displayFun(item))
+
+
+//display all dogs
+
+fetch("")
+.then(res => res.json)
+.then(dogs => dogs.map(dog => displayAll(dog)))
