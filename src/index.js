@@ -19,6 +19,17 @@ fetch("https://dog.ceo/api/breeds/image/random/4")
 
 //display all dogs
 
-fetch("")
-.then(res => res.json)
-.then(dogs => dogs.map(dog => displayAll(dog)))
+
+function displayAll(data){
+    obj = data.message
+   let location = document.querySelector("#dog-breeds")
+  console.log(Object.keys(obj))
+  
+   
+}
+
+
+fetch("https://dog.ceo/api/breeds/list/all")
+.then(res => res.json())
+.then(data => displayAll(data))
+// .then(dogs => dogs.message.forEach(dog => displayAll(dog)))
