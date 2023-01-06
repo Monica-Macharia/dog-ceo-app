@@ -23,9 +23,11 @@ fetch("https://dog.ceo/api/breeds/image/random/4")
 function displayAll(data){
     obj = data.message
    let location = document.querySelector("#dog-breeds")
-  console.log(Object.keys(obj))
+  num = Object.keys(obj)
   
-   
+  for (let item of num){
+    location.innerText = num
+  }
 }
 
 
@@ -33,3 +35,6 @@ fetch("https://dog.ceo/api/breeds/list/all")
 .then(res => res.json())
 .then(data => displayAll(data))
 // .then(dogs => dogs.message.forEach(dog => displayAll(dog)))
+
+
+console.log(document.querySelector("dog-image-container"))
